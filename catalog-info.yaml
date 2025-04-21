@@ -1,12 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "my-demo-app"
+  name: "auth-service"
+  tags:
+    - javascript
   annotations:
     github.com/project-slug: dfarrall/my-demo-app
+  links:
+    - url: dfarrall/my-demo-app
+      title: repo
+      icon: dashboard
+      type: admin-dashboard 
 spec:
   type: service
-  owner: user:default/guest
-  lifecycle: experimental
-  dependsOn: 
-    - "resource:my-demo-app-ec2"
+  owner: guests
+  lifecycle: production
